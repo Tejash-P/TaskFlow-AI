@@ -36,6 +36,14 @@ app.use('/api/content', contentRoutes);
 app.use('/api/calendar', calendarRoutes);
 app.use('/api/analytics', analyticsRoutes);
 
+// Root route
+app.get('/', (req, res) => {
+  res.status(200).json({
+    message: 'TaskFlow AI API is running',
+    health: '/health'
+  });
+});
+
 // Health check endpoint
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'OK', timestamp: new Date() });
