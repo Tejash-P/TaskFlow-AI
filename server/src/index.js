@@ -19,7 +19,7 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-  origin: 'https://task-flow-ai-rose.vercel.app/',
+  origin: 'task-flow-ai-rose.vercel.app',
   credentials: true
 }));
 app.use(express.json());
